@@ -25,10 +25,3 @@ build/
 .DS_Store
 Thumbs.db
 
-# Capturas temporales
-capturas/*.png
-!capturas/.gitkeep
-
-# Docs generados
-docs/*.pdf
-!docs/.gitkeep
