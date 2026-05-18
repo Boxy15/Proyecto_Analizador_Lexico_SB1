@@ -1,0 +1,18 @@
+# ArduinoEspañol — Programa con errores léxicos 1
+# Demuestra: símbolo desconocido, cadena sin cerrar, operador = suelto
+
+configurar pin 13 como salida
+
+# Error 1: símbolo '@' no pertenece al lenguaje
+encender led @13
+
+# Error 2: cadena sin comilla de cierre
+escribir pantalla "Hola Arduino
+
+# Error 3: operador '=' suelto (debe ser '==')
+si A0 = 512 entonces
+    encender led 13
+fin_si
+
+# Error 4: carácter '&' desconocido
+apagar led 13 &

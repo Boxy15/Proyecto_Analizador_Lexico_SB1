@@ -1,0 +1,107 @@
+Categorías de tokens
+ACCION:
+configurar, encender, apagar, leer, escribir, esperar, mover, repetir
+
+COMPONENTE:
+led, sensor, servo, buzzer, motor, boton, pantalla
+
+PALABRA_CLAVE:
+pin, como, en, a, durante, veces
+
+MODO:
+entrada, salida, entrada_pullup
+
+VALOR_DIGITAL:
+alto, bajo, encendido, apagado
+
+PIN_ANALOGICO:
+A0, A1, A2, A3, A4, A5
+
+PIN_DIGITAL:
+0, 1, 2, 3, ..., 13
+o también D0, D1, D2, ..., D13
+
+NUMERO:
+100, 500, 1000, 3.3
+
+UNIDAD:
+ms, segundos, grados
+
+CONTROL:
+si, entonces, sino, fin_si
+
+OPERADOR:
+>, <, >=, <=, ==, !=
+
+DELIMITADOR:
+;, (, ), {, }
+
+CADENA:
+"Hola Arduino"
+
+COMENTARIO:
+# Esto es un comentario
+
+Reglas buenas para ANTLR
+CONFIGURAR : 'configurar';
+ENCENDER   : 'encender';
+APAGAR     : 'apagar';
+LEER       : 'leer';
+ESCRIBIR   : 'escribir';
+ESPERAR    : 'esperar';
+MOVER      : 'mover';
+REPETIR    : 'repetir';
+
+LED        : 'led';
+SENSOR     : 'sensor';
+SERVO      : 'servo';
+BUZZER     : 'buzzer';
+MOTOR      : 'motor';
+BOTON      : 'boton';
+PANTALLA   : 'pantalla';
+
+PIN        : 'pin';
+COMO       : 'como';
+EN         : 'en';
+A          : 'a';
+DURANTE    : 'durante';
+VECES      : 'veces';
+
+ENTRADA        : 'entrada';
+SALIDA         : 'salida';
+ENTRADA_PULLUP : 'entrada_pullup';
+
+ALTO       : 'alto';
+BAJO       : 'bajo';
+
+SI         : 'si';
+ENTONCES   : 'entonces';
+SINO       : 'sino';
+FIN_SI     : 'fin_si';
+
+MAYOR_IGUAL : '>=';
+MENOR_IGUAL : '<=';
+IGUAL       : '==';
+DIFERENTE   : '!=';
+MAYOR       : '>';
+MENOR       : '<';
+
+PIN_ANALOGICO : 'A' [0-5];
+PIN_DIGITAL   : 'D'? [0-9]+;
+
+NUMERO : [0-9]+ ('.' [0-9]+)?;
+
+MS       : 'ms';
+SEGUNDOS : 'segundos';
+GRADOS   : 'grados';
+
+CADENA : '"' ~["\r\n]* '"';
+
+PUNTO_COMA : ';';
+LPAREN     : '(';
+RPAREN     : ')';
+LBRACE     : '{';
+RBRACE     : '}';
+
+COMENTARIO : '#' ~[\r\n]* -> skip;
+WS         : [ \t\r\n]+ -> skip;

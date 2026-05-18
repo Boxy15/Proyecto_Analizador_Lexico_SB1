@@ -1,0 +1,15 @@
+# ArduinoEspañol — Programa con errores léxicos 2
+# Demuestra: carácter $, comentario de bloque sin cerrar, símbolo %
+
+configurar pin D5 como salida
+
+# Error 1: carácter '$' no permitido en el lenguaje
+mover servo D5 a 90$ grados
+
+# Error 2: carácter '%' desconocido
+esperar 100 % ms
+
+// Error 3: comentario de bloque que nunca cierra
+/* Este comentario
+   no tiene cierre
+   y llega hasta el final del archivo

@@ -1,0 +1,34 @@
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Distribuciones / empaquetado
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Capturas temporales
+capturas/*.png
+!capturas/.gitkeep
+
+# Docs generados
+docs/*.pdf
+!docs/.gitkeep

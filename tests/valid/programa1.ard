@@ -1,0 +1,33 @@
+# ArduinoEspañol — Programa válido 1
+# Control de LED con parpadeo y lectura de sensor
+
+configurar pin 13 como salida
+configurar pin A0 como entrada
+configurar pin D9 como salida
+
+// Encender LED integrado de la placa
+encender led 13
+esperar 500 ms
+
+apagar led 13
+esperar 500 ms
+
+// Leer sensor de luz y reaccionar
+leer sensor en A0
+
+si A0 > 512 entonces
+    encender led 13
+sino
+    apagar led 13
+fin_si
+
+// Ciclo de parpadeo 3 veces
+repetir 3 veces
+    encender led 13
+    esperar 200 ms
+    apagar led 13
+    esperar 200 ms
+fin_repetir
+
+/* Apagado seguro al terminar */
+apagar led 13

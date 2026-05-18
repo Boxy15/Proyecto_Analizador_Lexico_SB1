@@ -1,0 +1,39 @@
+# ArduinoEspañol — Programa válido 2
+# Control de servo y buzzer con distintas unidades
+
+configurar pin D9 como salida
+configurar pin D6 como salida
+configurar pin A1 como entrada_pullup
+
+// Posicion inicial del servo
+mover servo D9 a 0 grados
+esperar 1 segundos
+
+// Barrer el servo de 0 a 180 grados
+mover servo D9 a 45 grados
+esperar 500 ms
+
+mover servo D9 a 90 grados
+esperar 500 ms
+
+mover servo D9 a 135 grados
+esperar 500 ms
+
+mover servo D9 a 180 grados
+esperar 500 ms
+
+// Activar buzzer si el boton esta presionado
+leer sensor en A1
+
+si A1 < 512 entonces
+    escribir buzzer D6 alto
+    esperar 200 ms
+    escribir buzzer D6 bajo
+sino
+    apagar motor D6
+fin_si
+
+// Volver a posicion central y apagar
+mover servo D9 a 90 grados
+esperar 1 segundos
+apagar motor D9
